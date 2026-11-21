@@ -1,0 +1,781 @@
+/* FLASHCARD - PAGE CSS */
+
+
+/* 1. UNIVERSAL SELECTOR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 2. ROOT COLORS */
+
+:root {
+    --bg-color: #080514;
+    --primary-color: #7928F5;
+    --secondary-color: #A855F7;
+    --card-color: #17112B;
+    --text-color: #FFFFFF;
+    --muted-color: #B8B0C9;
+    --border-color: rgba(168, 85, 247, 0.3);
+}
+
+
+/* 3. BODY STYLING */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    background: #080514;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    color: var(--muted-color);
+    margin-bottom: 15px;
+}
+
+h1, h2, h3, h4 {
+    color: white;
+    line-height: 1.3;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+::selection {
+    background: var(--primary-color);
+    color: white;
+}
+
+
+/*4. NAVIGATION BAR*/
+
+header {
+    width: 100%;
+    padding: 12px 4%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 25px;
+
+    background: rgba(25, 15, 48, 0.75);
+
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 0 20px rgba(121, 40, 245, 0.12);
+}
+
+nav h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+nav h1.logo span {
+    color: #A855F7 !important;
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #D8D0E8;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #B77AFF;
+}
+
+nav > a {
+    display: inline-block;
+    padding: 12px 22px;
+
+    background: linear-gradient(135deg, #A855F7, #6D28D9);
+
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+
+    transition: 0.3s;
+}
+
+nav > a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+}
+
+/* FlashCard Logo with Icon */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.logo span {
+    color: white;
+}
+
+
+
+
+/*5. MAIN topic HERO SECTION*/
+
+main > section:first-child {
+    padding: 80px 7%;
+    min-height: 400px;
+
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(121, 40, 245, 0.20),
+            transparent 38%
+        );
+
+    border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+}
+
+main > section:first-child > p:first-child {
+    display: inline-block;
+
+    color: #D8B4FE;
+    background: rgba(121, 40, 245, 0.15);
+
+    border: 1px solid rgba(168, 85, 247, 0.4);
+
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+main > section:first-child h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+main > section:first-child h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+main > section:first-child > p:nth-of-type(2) {
+    max-width: 550px;
+    font-size: 17px;
+}
+
+main > section:first-child > a {
+    display: inline-block;
+
+    padding: 13px 28px;
+    margin-top: 15px;
+
+    background: linear-gradient(135deg, #A855F7, #6D28D9);
+
+    border-radius: 30px;
+    border: 1px solid #A855F7;
+
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.4);
+
+    transition: 0.3s;
+}
+
+main > section:first-child > a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+}
+
+
+/*6. COMMON SECTION STYLING*/
+
+main > section:not(:first-child) {
+    padding: 25px 7%;
+    background: transparent;
+}
+
+main > section:not(:first-child) > h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+
+    padding-left: 18px;
+    position: relative;
+}
+
+main > section:not(:first-child) > h2::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 3px;
+
+    width: 7px;
+    height: 32px;
+
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+main > section:not(:first-child) p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/*7. INTRODUCTION SECTION*/
+
+#introduction {
+    border-bottom: 1px solid var(--border-color);
+}
+
+#introduction h3 {
+    font-size: 21px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#introduction p {
+    max-width: 900px;
+}
+
+
+/* 8. FEATURES SECTION */
+
+main > section:nth-of-type(3) {
+    background: transparent;
+}
+
+main > section:nth-of-type(3) ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    list-style: none;
+    margin-top: 25px;
+}
+
+main > section:nth-of-type(3) ul li {
+    padding: 17px 20px;
+
+    background: linear-gradient(145deg, #17112B, #111126);
+
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    color: #E5DDF5;
+
+    transition: 0.3s;
+}
+
+main > section:nth-of-type(3) ul li::before {
+    content: "✦";
+    color: #A855F7;
+    margin-right: 12px;
+}
+
+main > section:nth-of-type(3) ul li:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-4px);
+}
+
+/* 9.TOPICS SECTION */
+
+#topics {
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(121, 40, 245, 0.09),
+            transparent 65%
+        ) !important;
+}
+
+#topics > p {
+    margin-bottom: 30px;
+}
+
+#topics article {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 31.5%;
+    min-height: 210px;
+
+    padding: 25px 20px;
+    margin: 0 1% 20px 0;
+
+    text-align: center;
+
+    background: linear-gradient(145deg, #19264A, #17112B);
+
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+#topics article:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--secondary-color);
+
+    box-shadow: 0 8px 25px rgba(121, 40, 245, 0.25);
+}
+
+#topics article h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+#topics article p {
+    font-size: 14px;
+    min-height: 48px;
+}
+
+#topics article a {
+    display: inline-block;
+
+    padding: 8px 20px;
+    margin-top: 10px;
+
+    border: 1px solid #8B5CF6;
+    border-radius: 25px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+#topics article a:hover {
+    background: var(--primary-color);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+
+/*10.topic NOTES SECTIONS*/
+
+#syntax,
+#variables,
+#operators,
+#conditions,
+#loops,
+#functions {
+    border-top: 1px solid rgba(168, 85, 247, 0.12);
+}
+
+#syntax h3,
+#variables h3,
+#loops h3 {
+    margin: 25px 0 12px;
+    font-size: 21px;
+}
+
+#syntax p,
+#variables p,
+#conditions p,
+#loops p,
+#functions p {
+    max-width: 900px;
+}
+
+
+/*11. CODE EXAMPLE STYLING*/
+
+pre {
+    display: block;
+
+    width: 100%;
+    max-width: 900px;
+
+    padding: 25px;
+
+    margin: 20px 0;
+
+    background: #100B20;
+
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-left: 5px solid #A855F7;
+
+    border-radius: 12px;
+
+    color: #D8B4FE;
+
+    font-family: Consolas, monospace;
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    white-space: pre-wrap;
+    overflow-x: auto;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/*12. OPERATORS AND DATA TYPE LISTS*/
+
+#variables ul,
+#operators ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#variables ul li,
+#operators ul li {
+    padding: 12px 18px;
+    margin-bottom: 10px;
+
+    background: #17112B;
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+
+    color: #DDD2F0;
+
+    transition: 0.3s;
+}
+
+#variables ul li:hover,
+#operators ul li:hover {
+    border-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+
+/*13. topic QUIZ SECTION*/
+
+#quiz {
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(121, 40, 245, 0.12),
+            transparent 65%
+        ) !important;
+}
+
+#quiz form {
+    max-width: 850px;
+
+    padding: 30px;
+    margin-top: 25px;
+
+    background: linear-gradient(145deg, #19132D, #100B20);
+
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+}
+
+#quiz form h3 {
+    font-size: 19px;
+    margin: 25px 0 15px;
+    color: #E9D5FF;
+}
+
+#quiz form input[type="radio"] {
+    accent-color: #A855F7;
+    margin: 10px 10px 10px 5px;
+    cursor: pointer;
+}
+
+#quiz form {
+    color: #D8D0E8;
+}
+
+#quiz form button {
+    padding: 13px 30px;
+
+    background: linear-gradient(135deg, #A855F7, #6D28D9);
+
+    border: none;
+    border-radius: 30px;
+
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+
+    transition: 0.3s;
+}
+
+#quiz form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+}
+
+
+/*14. ANSWER KEY SECTION*/
+
+#answer-key {
+    max-width: 850px;
+    margin-top: 25px;
+    padding: 20px;
+
+    background: #17112B;
+
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+}
+
+#answer-key h3 {
+    margin-bottom: 15px;
+    color: #D8B4FE;
+}
+
+#answer-key details summary {
+    cursor: pointer;
+    color: #C084FC;
+    font-weight: bold;
+}
+
+#answer-key ol {
+    padding: 20px 30px;
+    color: #DDD2F0;
+}
+
+#answer-key ol li {
+    padding: 5px 0;
+}
+
+
+/*15. SUBJECT NAVIGATION*/
+
+#subject-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 40px 7%;
+
+    border-top: 1px solid var(--border-color);
+}
+
+#subject-navigation h2 {
+    width: 100%;
+    font-size: 27px;
+}
+
+#subject-navigation a {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border: 1px solid #8B5CF6;
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+#subject-navigation a:hover {
+    background: var(--primary-color);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+
+/*16. FOOTER*/
+
+footer {
+    padding: 40px 7%;
+
+    text-align: center;
+
+    background: #100B20;
+
+    border-top: 1px solid var(--border-color);
+}
+
+footer h3 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    display: inline-block;
+
+    padding: 9px 22px;
+    margin: 10px 0;
+
+    border: 1px solid #8B5CF6;
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+footer a:hover {
+    background: var(--primary-color);
+}
+
+
+/*17. TABLET RESPONSIVE DESIGN*/
+
+@media (max-width: 1000px) {
+
+    #topics article {
+        width: 48%;
+        margin-right: 1%;
+    }
+
+    main > section:first-child {
+        padding: 65px 5%;
+    }
+
+}
+
+
+/*18. MOBILE RESPONSIVE DESIGN*/
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 10px 3%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav h1 {
+        font-size: 25px;
+    }
+
+    main > section:first-child {
+        padding: 50px 6%;
+        text-align: center;
+    }
+
+    main > section:first-child h1 {
+        font-size: 45px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 21px;
+    }
+
+    main > section:first-child > p:nth-of-type(2) {
+        font-size: 15px;
+    }
+
+    main > section:not(:first-child) {
+        padding: 40px 5%;
+    }
+
+    main > section:not(:first-child) > h2 {
+        font-size: 25px;
+    }
+
+    main > section:nth-of-type(3) ul {
+        grid-template-columns: 1fr;
+    }
+
+    #topics article {
+        width: 100%;
+        margin: 0 0 18px;
+    }
+
+    pre {
+        font-size: 13px;
+        padding: 18px;
+    }
+
+    #quiz form {
+        padding: 20px 15px;
+    }
+
+    #quiz form h3 {
+        font-size: 17px;
+    }
+
+    #subject-navigation {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 35px 5%;
+    }
+
+    #subject-navigation a {
+        text-align: center;
+    }
+
+}
+
+
+/*19. SMALL MOBILE*/
+
+@media (max-width: 380px) {
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    main > section:first-child h1 {
+        font-size: 36px;
+    }
+
+    main > section:not(:first-child) > h2 {
+        font-size: 22px;
+    }
+
+    #quiz form {
+        padding: 15px 10px;
+    }
+
+}

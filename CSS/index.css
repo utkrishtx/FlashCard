@@ -1,0 +1,1027 @@
+/* FLASHCARD WEBSITE - COMPLETE CSS*/
+
+
+/*1. GLOBAL STYLING*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0B0618;
+    --primary-color: #7928F5;
+    --secondary-color: #A855F7;
+    --card-color: #17112B;
+    --text-color: #FFFFFF;
+    --muted-color: #B8B0C9;
+    --border-color: rgba(168, 85, 247, 0.25);
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #0B0618;
+}
+
+body {
+    background-color: #0B0618;
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    color: white;
+    line-height: 1.3;
+}
+
+p {
+    color: var(--muted-color);
+    margin-bottom: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+/*2. SAME BACKGROUND FOR ALL SECTIONS*/
+
+header,
+section,
+main,
+footer {
+    background-color: #0B0618;
+}
+
+
+/* =========================================
+   3. NAVIGATION BAR
+========================================= */
+
+header {
+    width: 100%;
+    padding: 12px 4%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 25px;
+
+    background-color: #130B24;
+
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 25px;
+
+    box-shadow: 0 0 20px rgba(121, 40, 245, 0.12);
+}
+
+nav h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+nav h1.logo span {
+    color: #A855F7 !important;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #D8D0E8;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #B77AFF;
+}
+
+nav > a {
+    display: inline-block;
+
+    background: linear-gradient(
+        135deg,
+        #A855F7,
+        #6D28D9
+    );
+
+    padding: 12px 22px;
+    border-radius: 30px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+
+    transition: 0.3s;
+}
+
+nav > a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+}
+
+
+/* FlashCard Logo with Icon */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.logo span {
+    color: white;
+}
+
+
+/*4. HERO SECTION*/
+
+.hero {
+    min-height: 450px;
+    padding: 50px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background-color: #0B0618;
+
+    background-image: radial-gradient(
+        circle at 85% 50%,
+        rgba(121, 40, 245, 0.18),
+        transparent 19%
+    );
+}
+
+.hero-content {
+    width: 55%;
+}
+
+
+/* Small Tagline */
+
+.hero-content p:first-child {
+    display: inline-block;
+
+    color: #D8B4FE;
+    background-color: #21143D;
+
+    padding: 8px 18px;
+
+    border: 1px solid #8B5CF6;
+    border-radius: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Main Heading */
+
+.hero h1 {
+    font-size: 75px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: var(--secondary-color);
+}
+
+
+/* Second Heading */
+
+.hero h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.hero h2 span {
+    color: var(--secondary-color);
+}
+
+
+/* Description */
+
+.hero-content p:not(:first-child) {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 480px;
+}
+
+
+/* Hero Buttons */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border: 1px solid #8B5CF6;
+    border-radius: 30px;
+
+    color: white;
+    transition: 0.3s;
+}
+
+.hero-buttons a:first-child {
+    background: linear-gradient(
+        135deg,
+        #A855F7,
+        #6D28D9
+    );
+
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.4);
+}
+
+.hero-buttons a:last-child {
+    background-color: transparent;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+
+/* Hero Image */
+
+.hero-image {
+    width: 55%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 115%;
+    max-width: 650px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/*5. ABOUT SECTION*/
+
+#about {
+    width: 100%;
+    padding: 50px 4%;
+
+    background-color: #0B0618;
+}
+
+#about h2 {
+    margin-bottom: 10px;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/*6. POPULAR SUBJECTS SECTION*/
+
+#subjects {
+    width: 100%;
+    padding: 50px 4% 60px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 20px;
+
+    background-color: #0B0618;
+}
+
+
+/* Section Heading */
+
+#subjects h2 {
+    grid-column: 1 / -1;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-bottom: -10px;
+
+    position: relative;
+    padding-left: 22px;
+}
+
+#subjects h2 span {
+    color: var(--secondary-color);
+}
+
+
+/* Purple Line */
+
+#subjects h2::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 5px;
+
+    width: 8px;
+    height: 32px;
+
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+
+/* Section Description */
+
+#subjects > p {
+    grid-column: 1 / -1;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+
+/* Subject Cards */
+
+#subjects article {
+    padding: 25px 15px;
+
+    min-width: 0;
+
+    text-align: center;
+
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+
+    background: linear-gradient(
+        145deg,
+        #17264A,
+        #111126
+    );
+
+    transition: 0.3s;
+}
+
+
+/* Different Card Colors */
+
+#subjects article:nth-of-type(2) {
+    background: linear-gradient(145deg, #48251F, #171126);
+}
+
+#subjects article:nth-of-type(3) {
+    background: linear-gradient(145deg, #172F59, #111126);
+}
+
+#subjects article:nth-of-type(4) {
+    background: linear-gradient(145deg, #494019, #171126);
+}
+
+#subjects article:nth-of-type(5) {
+    background: linear-gradient(145deg, #30205B, #111126);
+}
+
+#subjects article:nth-of-type(6) {
+    background: linear-gradient(145deg, #12433E, #111126);
+}
+
+
+/* Card Hover */
+
+#subjects article:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--secondary-color);
+
+    box-shadow: 0 8px 25px rgba(121, 40, 245, 0.25);
+}
+
+
+/* Card Heading */
+
+#subjects article h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+/* Card Description */
+
+#subjects article p {
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: var(--muted-color);
+}
+
+
+/* Notes + Quiz */
+
+#subjects article p:last-of-type {
+    color: #D8B4FE;
+    font-size: 12px;
+}
+
+
+/* Explore Button */
+
+#subjects article a {
+    display: inline-block;
+
+    padding: 7px 20px;
+
+    border: 1px solid #8B5CF6;
+    border-radius: 25px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+#subjects article a:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+
+/*CONTACT US SECTION*/
+
+#contact {
+    padding: 60px 7%;
+    background: transparent;
+}
+
+/* Contact Heading */
+
+#contact h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Contact Description */
+
+#contact p {
+    font-size: 15px;
+    color: #B8B0C9;
+    margin-bottom: 20px;
+}
+
+/* Contact Form */
+
+#contact form {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input and Textarea */
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    background: #17112B;
+
+    border: 1px solid rgba(168, 85, 247, 0.4);
+
+    border-radius: 10px;
+
+    color: white;
+    font-size: 15px;
+
+    outline: none;
+}
+
+/* Input Focus */
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #A855F7;
+}
+
+/* Textarea */
+
+#contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Submit Button */
+
+#contact button {
+    padding: 13px 25px;
+
+    width: fit-content;
+
+    background: linear-gradient(
+        135deg,
+        #A855F7,
+        #6D28D9
+    );
+
+    border: none;
+    border-radius: 25px;
+
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* Button Hover */
+
+#contact button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    #contact {
+        padding: 40px 5%;
+    }
+
+    #contact h2 {
+        font-size: 25px;
+    }
+
+    #contact form {
+        width: 100%;
+    }
+
+    #contact button {
+        width: 100%;
+    }
+
+}
+
+/*8. FOOTER*/
+
+footer {
+    width: 100%;
+    padding: 25px 4%;
+
+    background-color: #0B0618;
+
+    text-align: center;
+}
+
+
+
+/* SUCCESS POPUP */
+
+.success-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 2, 15, 0.85);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.success-popup.show {
+    display: flex;
+}
+
+.popup-content {
+    background: linear-gradient(145deg, #1c1035, #10091f);
+    border: 1px solid #9333ea;
+    border-radius: 22px;
+    padding: 40px 30px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 35px rgba(147, 51, 234, 0.4);
+    animation: popupShow 0.35s ease;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    background: #7c3aed;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 20px;
+}
+
+.popup-content h2 {
+    color: #c084fc;
+    margin-bottom: 12px;
+}
+
+.popup-content p {
+    color: #ddd6fe;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.popup-content button {
+    background: linear-gradient(90deg, #9333ea, #6d28d9);
+    color: white;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-content button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes popupShow {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+/* =========================================
+   FLASHCARD - RESPONSIVE DESIGN FIX
+========================================= */
+
+/* Consistent colors and sizing */
+
+html {
+    background: #0B0618;
+    color-scheme: dark;
+    scroll-padding-top: 20px;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    background: #0B0618 !important;
+}
+
+header, section, footer {
+    background-color: #0B0618 !important;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .hero {
+        padding: 45px 5%;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    #subjects {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    header {
+        padding: 12px 4%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .logo {
+        font-size: 23px;
+        gap: 6px;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav ul {
+        order: 3;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 8px 0 3px;
+    }
+
+    nav ul li {
+        flex-shrink: 0;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    nav > a {
+        padding: 9px 13px;
+        font-size: 11px;
+    }
+
+    /* Hero Section */
+
+    .hero {
+        min-height: auto;
+        padding: 45px 5% 30px;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+        gap: 20px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content p:first-child {
+        font-size: 12px;
+        padding: 6px 13px;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 11vw, 58px);
+        line-height: 1.15;
+        margin-bottom: 12px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .hero h2 span {
+        display: inline;
+    }
+
+    .hero-content p:not(:first-child) {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .hero-buttons a {
+        padding: 11px 16px;
+        font-size: 12px;
+    }
+
+    .hero-image {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    /* About */
+
+    #about {
+        padding: 35px 5%;
+    }
+
+    #about h2 {
+        font-size: 23px;
+    }
+
+    #about h3 {
+        font-size: 18px;
+    }
+
+    #about p,
+    #about li {
+        font-size: 14px;
+    }
+
+    /* Subjects */
+
+    #subjects {
+        padding: 35px 5% 45px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    #subjects h2 {
+        font-size: 25px;
+        padding-left: 17px;
+    }
+
+    #subjects h2::before {
+        width: 5px;
+        height: 27px;
+    }
+
+    #subjects > p {
+        font-size: 13px;
+    }
+
+    #subjects article {
+        padding: 20px 10px;
+        border-radius: 15px;
+        min-width: 0;
+    }
+
+    #subjects article h3 {
+        font-size: 17px;
+    }
+
+    #subjects article p {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+    #subjects article a {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    /* Contact */
+
+    #contact {
+        padding: 40px 5%;
+    }
+
+    #contact h2 {
+        font-size: 25px;
+    }
+
+    #contact p {
+        font-size: 14px;
+    }
+
+    #contact form {
+        width: 100%;
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    #contact label {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 100%;
+        font-size: 14px;
+        padding: 13px;
+    }
+
+    #contact button {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 30px 5%;
+    }
+
+    footer h3 {
+        font-size: 19px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+}
+
+/* Small Phones */
+
+@media (max-width: 380px) {
+
+    nav {
+        padding: 11px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav > a {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+    }
+
+    #subjects {
+        gap: 10px;
+    }
+
+    #subjects article {
+        padding: 16px 8px;
+    }
+
+    #subjects article a {
+        font-size: 10px;
+        padding: 7px 8px;
+    }
+
+}
+
+/* Prevent unwanted horizontal scrolling */
+
+* {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}

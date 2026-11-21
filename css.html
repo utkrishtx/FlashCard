@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - FlashCard</title>
+</head>
+<link rel="stylesheet" href="CSS/page.css">
+<script src="script.js"></script>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <nav>
+
+            
+             <h1 class="logo">
+            <img src="image/Icon.png" alt="FlashCard Logo">
+                Flash<span>Card</span>
+        </h1>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+
+            <a href="index.html">Back to Home</a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- CSS Hero Section -->
+        <section>
+
+            <p>Learn • Style • Design</p>
+
+            <h1>CSS Web Designing</h1>
+
+            <h2>Learn CSS From Basics to Advanced</h2>
+
+            <p>
+                Learn how to style websites using CSS.
+                Explore colors, layouts, selectors and
+                modern web designing techniques.
+            </p>
+
+            <a href="#topics">Start Learning</a>
+
+        </section>
+
+
+        <!-- Introduction to CSS -->
+        <section id="introduction">
+
+            <h2>Introduction to CSS</h2>
+
+            <p>
+                CSS stands for Cascading Style Sheets.
+                It is used to style and design HTML web pages.
+            </p>
+
+            <p>
+                CSS controls colors, fonts, spacing,
+                layouts, backgrounds and animations.
+            </p>
+
+            <h3>Who Created CSS?</h3>
+
+            <p>
+                CSS was first proposed by Håkon Wium Lie
+                in 1994.
+            </p>
+
+        </section>
+
+
+        <!-- Features of CSS -->
+        <section>
+
+            <h2>Features of CSS</h2>
+
+            <ul>
+                <li>Controls website appearance</li>
+                <li>Separates design from HTML structure</li>
+                <li>Provides different colors and fonts</li>
+                <li>Supports responsive web design</li>
+                <li>Helps create attractive layouts</li>
+                <li>Supports animations and transitions</li>
+            </ul>
+
+        </section>
+
+
+        <!-- CSS Learning Topics -->
+        <section id="topics">
+
+            <h2>CSS Learning Topics</h2>
+
+            <p>Choose a topic and start learning.</p>
+
+            <article>
+                <h3>1. CSS Syntax</h3>
+                <p>Learn the basic structure of CSS.</p>
+                <a href="#syntax">Learn More</a>
+            </article>
+
+            <article>
+                <h3>2. CSS Selectors</h3>
+                <p>Learn how to select HTML elements.</p>
+                <a href="#selectors">Learn More</a>
+            </article>
+
+            <article>
+                <h3>3. Colors and Backgrounds</h3>
+                <p>Learn how to add colors and backgrounds.</p>
+                <a href="#colors">Learn More</a>
+            </article>
+
+            <article>
+                <h3>4. Box Model</h3>
+                <p>Understand margin, padding and border.</p>
+                <a href="#box-model">Learn More</a>
+            </article>
+
+            <article>
+                <h3>5. Fonts and Text</h3>
+                <p>Learn how to style text and fonts.</p>
+                <a href="#fonts">Learn More</a>
+            </article>
+
+            <article>
+                <h3>6. CSS Flexbox</h3>
+                <p>Learn how to create flexible layouts.</p>
+                <a href="#flexbox">Learn More</a>
+            </article>
+
+        </section>
+
+
+        <!-- CSS Syntax -->
+        <section id="syntax">
+
+            <h2>1. CSS Syntax</h2>
+
+            <p>
+                CSS syntax consists of a selector
+                and a declaration block.
+            </p>
+
+            <pre>
+h1 {
+    color: purple;
+    font-size: 30px;
+}
+            </pre>
+
+            <h3>Explanation</h3>
+
+            <ul>
+                <li>h1 - Selector</li>
+                <li>color - Property</li>
+                <li>purple - Value</li>
+                <li>font-size - Property</li>
+                <li>30px - Value</li>
+            </ul>
+
+        </section>
+
+
+        <!-- CSS Selectors -->
+        <section id="selectors">
+
+            <h2>2. CSS Selectors</h2>
+
+            <p>
+                CSS selectors are used to select
+                HTML elements for styling.
+            </p>
+
+            <h3>Element Selector</h3>
+
+            <pre>
+p {
+    color: blue;
+}
+            </pre>
+
+            <h3>Class Selector</h3>
+
+            <pre>
+.heading {
+    color: purple;
+}
+            </pre>
+
+            <h3>ID Selector</h3>
+
+            <pre>
+#title {
+    font-size: 25px;
+}
+            </pre>
+
+        </section>
+
+
+        <!-- Colors and Backgrounds -->
+        <section id="colors">
+
+            <h2>3. CSS Colors and Backgrounds</h2>
+
+            <p>
+                CSS provides different ways to add
+                colors and backgrounds to web pages.
+            </p>
+
+            <pre>
+body {
+    background-color: black;
+}
+
+h1 {
+    color: purple;
+}
+            </pre>
+
+            <h3>Common Color Properties</h3>
+
+            <ul>
+                <li>color</li>
+                <li>background-color</li>
+                <li>opacity</li>
+            </ul>
+
+        </section>
+
+
+        <!-- CSS Box Model -->
+        <section id="box-model">
+
+            <h2>4. CSS Box Model</h2>
+
+            <p>
+                Every HTML element can be represented
+                as a rectangular box.
+            </p>
+
+            <h3>Four Parts of Box Model</h3>
+
+            <ul>
+                <li>Content - Actual content</li>
+                <li>Padding - Space around content</li>
+                <li>Border - Boundary around padding</li>
+                <li>Margin - Space outside the border</li>
+            </ul>
+
+            <pre>
+div {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid purple;
+    margin: 10px;
+}
+            </pre>
+
+        </section>
+
+
+        <!-- Fonts and Text -->
+        <section id="fonts">
+
+            <h2>5. CSS Fonts and Text</h2>
+
+            <p>
+                CSS provides properties to change
+                font style, size and alignment.
+            </p>
+
+            <pre>
+h1 {
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+            </pre>
+
+            <h3>Common Text Properties</h3>
+
+            <ul>
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-weight</li>
+                <li>text-align</li>
+                <li>text-decoration</li>
+            </ul>
+
+        </section>
+
+
+        <!-- CSS Flexbox -->
+        <section id="flexbox">
+
+            <h2>6. CSS Flexbox</h2>
+
+            <p>
+                Flexbox is used to arrange elements
+                in rows or columns.
+            </p>
+
+            <pre>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+            </pre>
+
+            <h3>Important Flexbox Properties</h3>
+
+            <ul>
+                <li>display</li>
+                <li>flex-direction</li>
+                <li>justify-content</li>
+                <li>align-items</li>
+                <li>flex-wrap</li>
+                <li>gap</li>
+            </ul>
+
+        </section>
+
+
+        <!-- CSS Quiz -->
+        <section id="quiz">
+
+            <h2>CSS Practice Quiz</h2>
+
+            <p>Test your CSS knowledge.</p>
+
+            <form>
+
+                <h3>Question 1: What is the full form of CSS?</h3>
+
+                <input type="radio" name="q1" value="a">
+                Computer Style Sheets
+                <br>
+
+                <input type="radio" name="q1" value="b">
+                Cascading Style Sheets
+                <br>
+
+                <input type="radio" name="q1" value="c">
+                Creative Style System
+                <br>
+
+
+                <h3>Question 2: Which property changes text color?</h3>
+
+                <input type="radio" name="q2" value="a">
+                background
+                <br>
+
+                <input type="radio" name="q2" value="b">
+                font-size
+                <br>
+
+                <input type="radio" name="q2" value="c">
+                color
+                <br>
+
+
+                <h3>Question 3: Which property adds space inside an element?</h3>
+
+                <input type="radio" name="q3" value="a">
+                margin
+                <br>
+
+                <input type="radio" name="q3" value="b">
+                padding
+                <br>
+
+                <input type="radio" name="q3" value="c">
+                border
+                <br>
+
+                <h3>Question 4: Which property enables Flexbox?</h3>
+
+                <input type="radio" name="q4" value="a">
+                display: flex
+                <br>
+
+                <input type="radio" name="q4" value="b">
+                position: flex
+                <br>
+
+                <input type="radio" name="q4" value="c">
+                flex: display
+                <br>
+
+                <br>
+
+                <button type="submit">Submit Quiz</button>
+
+            </form>
+
+
+            <!-- Quiz Answer Key -->
+            <section id="answer-key">
+
+                <h3>Quiz Answer Key</h3>
+
+                <details>
+
+                    <summary>View Correct Answers</summary>
+
+                    <ol>
+                        <li>Cascading Style Sheets</li>
+                        <li>color</li>
+                        <li>padding</li>
+                        <li>display: flex</li>
+                    </ol>
+
+                </details>
+
+            </section>
+
+        </section>
+
+
+        <!-- Subject Navigation -->
+        <section id="subject-navigation">
+
+            <h2>Continue Learning</h2>
+
+            <a href="html.html">← Previous: HTML</a>
+
+            <a href="javascript.html">Next Subject: JavaScript →</a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>FlashCard</h3>
+
+        <p>Study Smarter. Grow Faster.</p>
+
+        <a href="index.html">Back to Home</a>
+
+        <p>&copy; 2026 FlashCard. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>

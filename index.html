@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlashCard</title>
+
+    <link rel="stylesheet" href="CSS/index.css">
+
+    <script src="script.js"></script>
+
+</head>
+<body>
+    
+<!-- Navigation Bar -->
+<header>
+    <nav>
+        <h1 class="logo">
+            <img src="image/Icon.png" alt="FlashCard Logo">
+                Flash<span>Card</span>
+        </h1>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#subjects">Subjects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#subjects">Start Learning →</a>
+    </nav>
+</header>
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p>Learn • Revise • Test</p>
+
+        <h1>Flash<span>Card</span></h1>
+
+        <h2>
+            Short Notes. Smart Tests.
+            <span>Better Learning.</span>
+        </h2>
+
+        <p>
+            Explore concise notes on popular subjects
+            and test your knowledge with interactive quizzes.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#subjects">
+                ▷ Start Learning Now →
+            </a>
+
+            <a href="#subjects">
+                View Subjects
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Right Side Image -->
+
+    <div class="hero-image">
+
+        <img src="image/hero.png"alt="FlashCard Learning Illustration">
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+<section id="about">
+
+    <h2>About FlashCard</h2>
+
+    <p>
+        FlashCard is a simple learning platform designed
+        to help students understand topics quickly.
+    </p>
+
+    <p>
+        Read short notes, revise important concepts,
+        and test your knowledge through quizzes.
+    </p>
+
+    <h3>Why Choose FlashCard?</h3>
+
+    <ul>
+        <li>Short and easy-to-understand notes</li>
+        <li>Quick revision of important topics</li>
+        <li>Topic-based practice tests</li>
+        <li>Learn at your own speed</li>
+    </ul>
+
+</section>
+
+<!-- Popular Subjects Section -->
+
+<section id="subjects">
+
+    <h2>Popular<span>Subjects</span></h2>
+
+    <p>Choose your subject and start learning today.</p>
+
+
+    <!-- Python Card -->
+    <article>
+        <h3>Python</h3>
+        <p>Learn Python programming, variables, loops and functions.</p>
+        <p>Notes + Quiz</p>
+        <a href="python.html">Explore Python</a>
+    </article>
+
+
+    <!-- HTML Card -->
+    <article>
+        <h3>HTML</h3>
+        <p>Learn website structure and HTML elements.</p>
+        <p>Notes + Quiz</p>
+        <a href="html.html">Explore HTML</a>
+    </article>
+
+
+    <!-- CSS Card -->
+    <article>
+        <h3>CSS</h3>
+        <p>Learn website styling, layouts and designs.</p>
+        <p>Notes + Quiz</p>
+        <a href="css.html">Explore CSS</a>
+    </article>
+
+
+    <!-- JavaScript Card -->
+    <article>
+        <h3>JavaScript</h3>
+        <p>Learn interactive web development and programming.</p>
+        <p>Notes + Quiz</p>
+        <a href="javascript.html">Explore JavaScript</a>
+    </article>
+
+
+    <!-- C++ Card -->
+    <article>
+        <h3>C++</h3>
+        <p>Learn programming fundamentals and OOP concepts.</p>
+        <p>Notes + Quiz</p>
+        <a href="cpp.html">Explore C++</a>
+    </article>
+
+
+    <!-- DSA Card -->
+    <article>
+        <h3>DSA</h3>
+        <p>Learn data structures and algorithms.</p>
+        <p>Notes + Quiz</p>
+        <a href="dsa.html">Explore DSA</a>
+    </article>
+
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>Have any questions or suggestions? Feel free to contact us.</p>
+
+    <form id="contactForm">
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        
+
+        <label for="message">Your Message:</label>
+        
+        <textarea id="message" name="message" rows="4" cols="30"
+        placeholder="Write your message"></textarea>
+
+        
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</section>
+
+<div class="success-popup" id="successPopup">
+
+    <div class="popup-content">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Message Sent!</h2>
+
+        <p id="successMessage">
+            Your message has been submitted successfully.
+        </p>
+
+        <button type="button" id="closePopup">
+            OK, Great!
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+
+    <h3>Flash<span>Card</span></h3>
+
+    <p>Study Smarter. Grow Faster.</p>
+
+    <p>&copy; 2026 FlashCard. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
